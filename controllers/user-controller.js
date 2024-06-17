@@ -67,7 +67,7 @@ class UserController {
         maxAge: 30 * 24 * 60 * 60 * 1000,
         secure: true,
         httpOnly: true,
-        domain: "furniture-app-backend.onrender.com",
+        domain: "furniture-back.onrender.com",
         sameSite: "none",
       });
       return res.json({
@@ -89,7 +89,7 @@ class UserController {
       res.clearCookie("refreshToken", {
         sameSite: "none",
         secure: true,
-        domain: ".furniture-app-backend.onrender.com",
+        domain: ".furniture-back.onrender.com",
       });
       const userDto = new UserDto(userData);
       return res.json(userDto);
@@ -111,7 +111,7 @@ class UserController {
         res.clearCookie("refreshToken", {
           sameSite: "none",
           secure: true,
-          domain: ".furniture-app-backend.onrender.com",
+          domain: ".furniture-back.onrender.com",
         });
         throw ApiError.UnauthorizedError();
       }
@@ -131,7 +131,7 @@ class UserController {
         maxAge: 30 * 24 * 60 * 60 * 1000,
         secure: true,
         httpOnly: true,
-        domain: "furniture-app-backend.onrender.com",
+        domain: "furniture-back.onrender.com",
         sameSite: "none",
       });
       return res.json({
