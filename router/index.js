@@ -9,6 +9,7 @@ router.post("/registration", userController.registration);
 router.post("/login", userController.login);
 router.post("/logout", userController.logout);
 router.get("/test", (req, res) => {
+  console.log("success test")
   res.send("test2");
 });
 router.get("/refresh", userController.refresh);
